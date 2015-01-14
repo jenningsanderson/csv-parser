@@ -1,0 +1,11 @@
+{
+  "name": "csv-parser",
+  "version": "1.0.0",
+  "description": "CSV Parser for Homework 1: Information Retrieval",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
