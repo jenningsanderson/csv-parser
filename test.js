@@ -1,27 +1,37 @@
+// Load the csv-parser
 var csv = require('./lib/csv.js')
 
-var r = csv.parseSync(url)
-console.log(r)
+var smallData 	= './sample_data/sample.csv'
+var BigData 	= './sample_data/Fielding.csv'
 
-csv.parseAsync(url, function(error, data){
-	if (error)
-		throw error
-	console.log(data)	
-})
 
-fs.createReadStream('path/to/data.csv')
- .pipe(csv.parsePipe())
- .pipe(fs.createWriteStream('path/to/data.txt'))
+//Synchronous Parsing
+// var syncR = csv.parseSync(smallData)
+// console.log(syncR)
 
-var p = csv.parseObject(url)
-p.on('data', function(data){
-	console.log('got some data:' + data)
-})
-p.on('end', function(){
-	console.log('no more data')
-})
-p.on('error', function(err){
-	alert('something error' + err)
-})
+//ASynchronous Parsing
+var aSyncR = csv.parseAsync(smallData)
+// console.log(aSyncR)
 
-p.run()
+// csv.parseAsync(url, function(error, data){
+// 	if (error)
+// 		throw error
+// 	console.log(data)	
+// })
+
+// fs.createReadStream('path/to/data.csv')
+//  .pipe(csv.parsePipe())
+//  .pipe(fs.createWriteStream('path/to/data.txt'))
+
+// var p = csv.parseObject(url)
+// p.on('data', function(data){
+// 	console.log('got some data:' + data)
+// })
+// p.on('end', function(){
+// 	console.log('no more data')
+// })
+// p.on('error', function(err){
+// 	alert('something error' + err)
+// })
+
+// p.run()
