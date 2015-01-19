@@ -15,5 +15,5 @@ csv.parseAsync(smallData)
 csv.parsePipe(smallData)
 
 //Object Parsing
-var p = csv.buildParser()
+var p = new csv.Parser()
 p.run(smallData)
